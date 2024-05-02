@@ -3,7 +3,7 @@ import csv
 import random
 
 class Stadium:
-    def _init_(self, upper, middle, lower, total, booked, base):
+    def __init__(self, upper, middle, lower, total, booked, base):
         self.upper = upper
         self.middle = middle
         self.lower = lower
@@ -98,7 +98,7 @@ class Stadium:
         st.write("Number of seats left:", self.notbooked)
         st.write("Contact customer care for further support")
 
-if _name_ == "_main_":
+if __name__ == "_main_":
     st.title("Stadium Ticket Booking System")
     stadium = Stadium(100, 52, 200, 2000, 1648, 1000)
     choice = st.sidebar.selectbox("Select an option", ("Booking", "Print Schedule", "Enquiry"))
